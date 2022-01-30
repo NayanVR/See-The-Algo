@@ -1,0 +1,21 @@
+const BAR_MIN_BOUND = 20;
+const BAR_MAX_BOUND = 400;
+const ARRAY_LENGTH_MIN = 5;
+const ARRAY_LENGTH_MAX = 100;
+const ANIM_SPEED_MIN = 10;
+const ANIM_SPEED_MAX = 500;
+const PRIMARY_COLOR = 'blue';
+const COMPARISON_COLOR = 'red';
+const SORTED_COLOR = 'green';
+
+export default {
+    BAR_MIN_BOUND,
+    BAR_MAX_BOUND,
+    ARRAY_LENGTH_MIN,
+    ARRAY_LENGTH_MAX,
+    ANIM_SPEED_MIN,
+    ANIM_SPEED_MAX,
+    PRIMARY_COLOR,
+    COMPARISON_COLOR,
+    SORTED_COLOR
+}
