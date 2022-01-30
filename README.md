@@ -4,7 +4,7 @@ See The Algo is algorithm visualizer project. It shows how algorithm is working 
 
 ## Run it on your local machine
 
-- This is next.js app so you need node installed on your system. 
+- This is next.js app so you need [node](https://nodejs.org/en/) installed on your system. 
 - fork this repo and clone to your system
 - run below command to start development server
 ```bash
