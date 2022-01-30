@@ -2,15 +2,22 @@ html,
 body {
   padding: 0;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
-}
-
-a {
-  color: inherit;
-  text-decoration: none;
 }
 
 * {
   box-sizing: border-box;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  margin-top: 15px;
+}
+
+.array-bar {
+  width: 5px;
+  background-color: blue;
+  margin: 0 2px;
+  transition: height 0.2s;
 }
