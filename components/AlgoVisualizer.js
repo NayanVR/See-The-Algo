@@ -57,11 +57,11 @@ function AlgoVisualizer() {
           <div className="range-container">
             <div className="range-inner-container">
               <input onChange={onElementsSliderChange} value={noOfElements} min={consts.ARRAY_LENGTH_MIN} max={consts.ARRAY_LENGTH_MAX} step="1" id="size-slider" type="range"></input>
-              <label for="size-slider">SIZE</label>
+              <label htmlFor="size-slider">SIZE</label>
             </div>
             <div className="range-inner-container">
               <input onChange={onSpeedSliderChange} value={(consts.ANIM_SPEED_MAX + consts.ANIM_SPEED_MIN)-animSpeedMillis} min={consts.ANIM_SPEED_MIN} max={consts.ANIM_SPEED_MAX} step="10" id="size-slider" type="range"></input>
-              <label for="size-slider">SPEED</label>
+              <label htmlFor="size-slider">SPEED</label>
             </div>
           </div>  
           <div className="sorting-container">
