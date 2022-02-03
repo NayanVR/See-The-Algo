@@ -2,13 +2,21 @@ html,
 body {
   padding: 0;
   margin: 0;
+  background-color: #eff5ff;
 }
 
 * {
+  font-family: "Poppins";
   box-sizing: border-box;
 }
 
-.container {
+.main-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.array-container {
   display: flex;
   justify-content: center;
   align-items: flex-end;
@@ -17,7 +25,167 @@ body {
 
 .array-bar {
   width: 5px;
-  background-color: blue;
+  background-color: #3988ff;
+  color: #fff;
+  text-align: center;
+  border-radius: 2px;
   margin: 0 2px;
   transition: height 0.2s;
+}
+
+.array-bottom-bar {
+  width: 85vw;
+  height: 1rem;
+  background-color: #3d0066;
+  border-radius: 5px;
+}
+
+/* Bottom navigation bar */
+
+.bottom-container {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  display: flex;
+  width: 100vw;
+  height: max-content;
+  background-color: #fdc500;
+}
+
+.gen-container {
+  flex: 2;
+  padding: 1.5rem;
+  border-right: 2px solid rgba(0, 0, 0, 0.3);
+}
+
+.range-container {
+  flex: 2;
+  padding: 1.5rem;
+  border-right: 2px solid rgba(0, 0, 0, 0.3);
+}
+
+.sorting-container {
+  padding: 1.5rem;
+  flex: 3;
+  border-right: 2px solid rgba(0, 0, 0, 0.3);
+}
+
+.clear-container {
+  flex: 1;
+  padding: 1.5rem;
+}
+
+.btn {
+  background-color: #3d0066;
+  color: #fff;
+  cursor: pointer;
+  transition: all 0.5s ease;
+}
+
+.btn:disabled {
+  background-color: #201b24;
+  color: #ababab;
+}
+
+.btn:hover:not([disabled]) {
+  background-color: #7700c8;
+}
+
+.gen-btn {
+  width: 100%;
+  padding: 1.4rem 1.6rem;
+  border: none;
+  font-size: 1.2rem;
+  border-radius: 1rem;
+}
+
+.range-inner-container {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.range-inner-container > label {
+  font-weight: 900;
+  font-size: 1.2rem;
+  color: #3d0066;
+}
+
+.range-inner-container:nth-last-child(1) {
+  margin-top: 1rem;
+}
+
+.sorting-btns-container {
+  display: flex;
+  width: 100%;
+  height: 45%;
+}
+
+.sorting-btns-container:nth-last-child(1) {
+  margin-top: 0.5rem;
+}
+
+.sort-btn {
+  width: 100%;
+  /*   height: 100%; */
+  padding: 0.25rem;
+  margin: 0 0.4rem;
+  font-size: 1rem;
+  border: none;
+  border-radius: 0.4rem;
+}
+
+.clear-btn {
+  height: 100%;
+  width: 100%;
+  border: none;
+  background-color: #bf211e;
+  border-radius: 1rem;
+  padding-top: 0.4rem;
+  cursor: pointer;
+  transition: all 0.5s ease;
+}
+
+.clear-btn:hover {
+  background-color: #ff4542;
+}
+
+input[type="range"] {
+  -webkit-appearance: none;
+  margin-right: 15px;
+  width: 200px;
+  height: 7px;
+  background: rgba(255, 255, 255);
+  border-radius: 5px;
+  background-image: linear-gradient(#3d0066, #3d0066);
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+}
+
+/* Input Thumb */
+input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  height: 20px;
+  width: 30px;
+  border-radius: 15%;
+  background: #3d0066;
+  cursor: ew-resize;
+  transition: background 0.3s ease-in-out;
+}
+
+input[type="range"]:hover:not([disabled]) {
+  background-image: linear-gradient(#7700c8, #7700c8);
+}
+
+input[type="range"]:disabled {
+  background-image: linear-gradient(#201b24, #201b24);
+}
+
+input[type="range"]:hover:not([disabled]) + label {
+  color: #7700c8;
+}
+
+input[type="range"]:disabled + label {
+  color: #201b24;
 }

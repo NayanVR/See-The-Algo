@@ -4,8 +4,8 @@ const ARRAY_LENGTH_MIN = 5;
 const ARRAY_LENGTH_MAX = 100;
 const ANIM_SPEED_MIN = 10;
 const ANIM_SPEED_MAX = 500;
-const PRIMARY_COLOR = 'blue';
-const COMPARISON_COLOR = 'red';
+const PRIMARY_COLOR = '#3988FF';
+const COMPARISON_COLOR = '#FF3834';
 const SORTED_COLOR = 'green';
 
 export default {
