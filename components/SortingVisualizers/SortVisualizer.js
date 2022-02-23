@@ -1,16 +1,27 @@
 import getBubbleSortAnimations from './BubbleSort';
+import getInsertionSortAnimations from './InsertionSort';
 import { toggleDisable } from '../../utils/UtilFunc'
 import consts from '../../utils/Constants'
 
 export function bubbleSort(animSpeedMillis, array, timeouts) {
     const animations = getBubbleSortAnimations(array)
+    visualize(animations, animSpeedMillis, array, timeouts)
+}
+
+export function insertionSort(animSpeedMillis, array, timeouts) {
+    const animations = getInsertionSortAnimations(array)
+    visualize(animations, animSpeedMillis, timeouts)
+}
+
+function visualize(animations, animSpeedMillis, timeouts) {
+    
     const arrayBars = document.getElementsByClassName('array-bar')
     
     toggleDisable(true)
     timeouts.push(setTimeout(() => {
         toggleDisable(false)
     }, animations.length * animSpeedMillis));
-
+    
     for (let index = 0; index < animations.length; index++) {
         
         let { comparison, swap } = animations[index]

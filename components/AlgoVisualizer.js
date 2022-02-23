@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import consts from '../utils/Constants'
 import resetArray from '../utils/ResetArray';
 import { max, clearTheProcess } from '../utils/UtilFunc'
-import { bubbleSort } from './SortingVisualizers/BubbleSortVisualizer'
+import { bubbleSort, insertionSort } from './SortingVisualizers/SortVisualizer'
 import Image from 'next/image';
 
 function AlgoVisualizer() {
@@ -67,7 +67,7 @@ function AlgoVisualizer() {
           <div className="sorting-container">
             <div className="sorting-btns-container">
               <button onClick={() => bubbleSort(animSpeedMillis, array.slice(), timeouts)} className="btn sort-btn">Bubble Sort</button>
-              <button className="btn sort-btn">Coming Soon</button>
+              <button onClick={() => insertionSort(animSpeedMillis, array.slice(), timeouts)} className="btn sort-btn">Insertion Sort</button>
             </div>
             <div className="sorting-btns-container">
               <button className="btn sort-btn">Coming Soon</button>
