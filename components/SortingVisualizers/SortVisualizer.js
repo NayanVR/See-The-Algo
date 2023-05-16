@@ -1,7 +1,19 @@
 import getBubbleSortAnimations from './BubbleSort';
 import getInsertionSortAnimations from './InsertionSort';
+import getMergeSortAnimations from './MergeSort';
+import getQuickSortAnimations from './QuickSort';
 import { toggleDisable } from '../../utils/UtilFunc'
 import consts from '../../utils/Constants'
+
+export function quickSort(animSpeedMillis, array, timeouts) {
+    const animations = getQuickSortAnimations(array)
+    visualize(animations, animSpeedMillis, array, timeouts)
+}
+
+export function mergeSort(animSpeedMillis, array, timeouts) {
+    const animations = getMergeSortAnimations(array)
+    visualize(animations, animSpeedMillis, array, timeouts)
+}
 
 export function bubbleSort(animSpeedMillis, array, timeouts) {
     const animations = getBubbleSortAnimations(array)
@@ -14,28 +26,28 @@ export function insertionSort(animSpeedMillis, array, timeouts) {
 }
 
 function visualize(animations, animSpeedMillis, timeouts) {
-    
+
     const arrayBars = document.getElementsByClassName('array-bar')
-    
+
     toggleDisable(true)
     timeouts.push(setTimeout(() => {
         toggleDisable(false)
     }, animations.length * animSpeedMillis));
-    
-    for (let index = 0; index < animations.length; index++) {
-        
-        let { comparison, swap } = animations[index]
-        let [ i, j ] = comparison
 
-        
+    for (let index = 0; index < animations.length; index++) {
+
+        let { comparison, swap } = animations[index]
+        let [i, j] = comparison
+
+
         let barOne = arrayBars[i]
         let barTwo = arrayBars[j]
-        
+
         timeouts.push(setTimeout(() => {
             barOne.style.backgroundColor = consts.COMPARISON_COLOR
             barTwo.style.backgroundColor = consts.COMPARISON_COLOR
-            
-            
+
+
             setTimeout(() => {
                 barOne.style.backgroundColor = consts.PRIMARY_COLOR
                 barTwo.style.backgroundColor = consts.PRIMARY_COLOR
