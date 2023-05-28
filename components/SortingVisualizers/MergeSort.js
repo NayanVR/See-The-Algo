@@ -2,7 +2,9 @@ let animations = [];
 
 export default function getMergeSortAnimations(arr) {
     mergeSort(arr, 0, arr.length - 1);
-    return animations;
+    const temp = [...animations];
+    animations = [];
+    return temp;
 }
 
 function merge(arr, start, mid, end) {
